@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Debashree Guha Adhya | Associate Professor</title>
+    <title>Dr. Gowtham Reddy Nimmalapalli | Postdoctoral Fellow</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
             --primary: #4f46e5;      /* Indigo */
             --primary-dark: #4338ca;
             --secondary: #0ea5e9;    /* Sky Blue */
-            --accent: #f43f5e;       /* Rose for alerts/birthdays */
+            --accent: #f43f5e;       /* Rose for alerts */
             --bg-body: #f8fafc;      /* Light Gray-Blue */
             --bg-card: #ffffff;
             --text-main: #1e293b;    /* Slate 800 */
@@ -131,7 +131,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- HOME SECTION STYLE --- */
+        /* --- HERO SECTION --- */
         .hero-card {
             background: var(--bg-card);
             border-radius: var(--radius);
@@ -163,7 +163,7 @@
         .hero-img:hover { transform: scale(1.02); }
 
         .hero-info { flex: 1; min-width: 300px; }
-        .hero-info h1 { font-size: 2.5rem; margin-bottom: 5px; line-height: 1.2; }
+        .hero-info h1 { font-size: 2.2rem; margin-bottom: 5px; line-height: 1.2; }
         .hero-info h2 { font-size: 1.1rem; color: var(--primary); font-weight: 500; margin-bottom: 15px; }
         
         .hero-contact {
@@ -189,7 +189,7 @@
 
         .social-icons { margin-top: 20px; display: flex; gap: 15px; }
         .social-icons a { 
-            font-size: 1.8rem; 
+            font-size: 1.6rem; 
             color: var(--text-muted); 
             transition: 0.3s; 
         }
@@ -212,24 +212,25 @@
             align-items: center;
             gap: 15px;
             margin-bottom: 25px;
+            margin-top: 40px;
         }
         .section-header h2 { font-size: 1.5rem; color: var(--text-main); }
         .section-line { height: 2px; background: #e2e8f0; flex: 1; border-radius: 2px; }
 
         /* --- TAGS --- */
-        .tags-container { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+        .tags-container { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
         .tag {
             background: white;
             border: 1px solid #e2e8f0;
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             font-weight: 500;
             box-shadow: var(--shadow-sm);
         }
 
-        /* --- EXPERIENCE TIMELINE --- */
+        /* --- TIMELINE --- */
         .timeline {
             position: relative;
             padding-left: 30px;
@@ -265,11 +266,13 @@
 
         .timeline-content h3 { font-size: 1.1rem; margin-bottom: 2px; }
         .timeline-content p { color: var(--text-muted); font-size: 0.95rem; }
+        .timeline-content .supervisor { font-size: 0.9rem; color: #475569; margin-top: 4px; font-style: italic;}
+        .timeline-content a { color: var(--primary); font-weight: 500; }
 
-        /* --- CARDS (Team, Projects, etc) --- */
+        /* --- CARDS --- */
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 30px;
             margin-top: 20px;
         }
@@ -288,31 +291,31 @@
             box-shadow: var(--shadow-lg);
         }
 
+        /* Current Position Card */
+        .highlight-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-left: 5px solid var(--secondary);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        /* Team Card */
         .team-card {
             text-align: center;
             padding: 30px 20px;
-            position: relative;
         }
-
-        .team-photo-wrap {
-            position: relative;
+        .team-photo {
             width: 120px;
             height: 120px;
-            margin: 0 auto 15px;
-        }
-
-        .team-photo {
-            width: 100%;
-            height: 100%;
             object-fit: cover;
             border-radius: 50%;
+            margin-bottom: 15px;
             box-shadow: var(--shadow-sm);
         }
-
-        .team-name { font-weight: 700; display: block; margin-bottom: 5px; color: var(--text-main); }
+        .team-name { font-weight: 700; display: block; margin-bottom: 5px; color: var(--text-main); font-size: 1rem;}
         .team-role { font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; display: block; }
 
-        /* --- PUBLICATIONS --- */
+        /* Publications */
         .pub-item {
             background: white;
             padding: 20px;
@@ -324,105 +327,9 @@
         }
         .pub-item:hover { transform: translateX(5px); }
         .pub-text { font-size: 0.95rem; color: #334155; }
+        .pub-text strong { display: block; margin-bottom: 5px; color: var(--text-main); font-size: 1.05rem;}
 
-        /* --- FUNDING LOGOS --- */
-        .funding-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            padding: 20px;
-            background: white;
-            border-radius: var(--radius);
-        }
-        .funding-logo {
-            height: 60px;
-            width: auto;
-            filter: grayscale(100%);
-            opacity: 0.6;
-            transition: 0.3s;
-        }
-        .funding-logo:hover { filter: grayscale(0); opacity: 1; transform: scale(1.1); }
-
-        /* --- GALLERY --- */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        .gallery-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 12px;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        .gallery-img:hover { transform: scale(1.03); box-shadow: var(--shadow-md); }
-
-        /* --- BIRTHDAY ANIMATION --- */
-        .birthday-badge {
-            position: absolute;
-            top: 0; right: 0;
-            background: var(--accent);
-            color: white;
-            font-size: 0.7rem;
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 20px;
-            z-index: 10;
-            animation: bounce 2s infinite;
-        }
-        .balloon {
-            position: absolute;
-            bottom: 0;
-            font-size: 1.5rem;
-            opacity: 0;
-            animation: floatUp 4s ease-in infinite;
-        }
-        .bal-1 { left: 10%; animation-delay: 0s; }
-        .bal-2 { right: 10%; animation-delay: 1.5s; }
-        
-        @keyframes bounce { 0%, 100% {transform: translateY(0);} 50% {transform: translateY(-5px);} }
-        @keyframes floatUp { 0% {bottom:0; opacity:0;} 20%{opacity:1;} 100%{bottom:150px; opacity:0;} }
-
-        /* --- NEWS --- */
-        .news-card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-            margin-bottom: 20px;
-            border-top: 4px solid var(--primary);
-        }
-        .news-date {
-            display: inline-block;
-            background: #e0e7ff;
-            color: var(--primary);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .upcoming-badge {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            margin-right: 8px;
-            animation: pulse 1.5s infinite;
-        }
-        
-        @keyframes pulse { 0% {opacity:1;} 50% {opacity:0.6;} 100% {opacity:1;} }
-
-        /* --- RESPONSIVE --- */
+        /* Responsive */
         @media (max-width: 768px) {
             .navbar { height: auto; padding: 10px 0; }
             .nav-container { flex-direction: column; gap: 10px; }
@@ -440,16 +347,12 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-brand" onclick="showHome()">
-                <i class="fas fa-microscope"></i> MEDICAL INFORMATICS LAB
+                <i class="fas fa-brain"></i> Dr. Gowtham Reddy N
             </a>
             <div class="nav-links">
                 <button class="nav-btn active" onclick="showHome()">Home</button>
                 <button class="nav-btn" onclick="openTab(event, 'team')">Team</button>
                 <button class="nav-btn" onclick="openTab(event, 'publications')">Publications</button>
-                <button class="nav-btn" onclick="openTab(event, 'events')">Events</button>
-                <button class="nav-btn" onclick="openTab(event, 'vacancies')">Vacancies</button>
-                <button class="nav-btn" onclick="openTab(event, 'pictures')">Gallery</button>
-                <button class="nav-btn" onclick="openTab(event, 'news')">News</button>
             </div>
         </div>
     </nav>
@@ -458,255 +361,188 @@
         
         <div class="hero-card">
             <div class="hero-img-container">
-                <a href="https://www.iitkgp.ac.in/department/MM/faculty/mm-debashree_smst" target="_blank">
-                    <img src="Debashree.jpg" alt="Dr. Debashree Guha" class="hero-img">
-                </a>
+                <img src="profile.png" alt="Dr. Gowtham Reddy" class="hero-img">
             </div>
             <div class="hero-info">
-                <h1>Dr. Debashree Guha Adhya</h1>
-                <h2>Associate Professor, SMST, IIT Kharagpur</h2>
+                <h1>Dr. Gowtham Reddy Nimmalapalli</h1>
+                <h2>Postdoctoral Fellow, IIT Gandhinagar</h2>
                 
-                <div class="tags-container" style="margin-bottom: 20px;">
-                    <span class="tag">Operations Research</span>
-                    <span class="tag">MCDM in Healthcare</span>
-                    <span class="tag">Predictive Modeling</span>
-                    <span class="tag">Uncertainty Handling</span>
+                <div class="tags-container">
+                    <span class="tag">Biomedical Signal Processing</span>
+                    <span class="tag">Brain Computer Interfaces</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Deep Learning</span>
                 </div>
 
                 <div class="hero-contact">
-                    <a href="mailto:debashree_smst@smst.iitkgp.ac.in" class="contact-btn">
+                    <a href="mailto:gowtham12.reddy@gmail.com" class="contact-btn">
                         <i class="fas fa-envelope"></i> Email Me
                     </a>
                 </div>
 
                 <div class="social-icons">
-                    <a href="https://scholar.google.com/citations?user=tD8YpZUAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://orcid.org/0000-0001-9683-4509" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
+                    <a href="https://www.linkedin.com/in/dr-gowtham-reddy-n-4098376b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://scholar.google.com/citations?user=1KALulcAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://orcid.org/0000-0002-2358-1720" target="_blank"><i class="ai ai-orcid"></i></a>
                 </div>
             </div>
         </div>
 
         <div class="bio-text">
-            <p>The <strong>Medical Informatics Lab</strong> at the School of Medical Science and Technology, IIT Kharagpur, led by Debashree Guha, focuses on developing intelligent, uncertainty-aware decision-making frameworks for healthcare and biomedical applications. The group integrates decision science, data aggregation, fuzzy logic, and information fusion to address complex clinical and biomedical problems. Emphasis is placed on building interpretable, scalable, and computationally efficient decision support tools that transform heterogeneous and uncertain data into actionable knowledge.</p>
+            <p>I actively conduct research in AI-driven biomedical signal processing, brain–computer interfaces, and intelligent medical decision-making. My work focuses on developing efficient, interpretable, and real-time decision support systems for healthcare applications. I design novel feature representation and multimodal fusion strategies to model complex interactions in non-stationary biosignals such as EEG and sEMG. I explore attention-based deep learning, time–frequency analysis, and ensemble frameworks to extract clinically meaningful patterns from uncertain data. I also develop lightweight models suitable for point-of-care deployment. Currently, I work on hybrid BCI systems for effective decision communication. My long-term goal is to build trustworthy AI systems for neurological healthcare and assistive technologies.</p>
         </div>
 
         <div class="section-header">
-            <h2>Current Projects</h2>
+            <h2>Current Focus</h2>
             <div class="section-line"></div>
         </div>
-        <div class="card" style="padding: 25px; margin-bottom: 40px; border-left: 5px solid var(--primary);">
-            <h3 style="margin-bottom: 10px; color: var(--primary);">Multi-modal Fusion for Glaucoma Detection</h3>
-            <p style="color: #475569;">Multi-modal Fusion of Tear Fern Patterns and Fundus Imaging for Detection of Glaucoma in Low-resource Settings.</p>
-            <br>
-            <p style="font-size: 0.9rem; font-weight: 600;">Funded by: Indian Council of Medical Research (ICMR)</p>
+        <div class="card highlight-card">
+            <h3 style="color: var(--primary);">Hybrid BCI for Effective Decision Communication</h3>
+            <p style="margin-top: 10px;"><strong>Role:</strong> Postdoctoral Fellow</p>
+            <p><strong>Institute:</strong> Indian Institute of Technology Gandhinagar</p>
+            <p><strong>PI:</strong> <a href="https://scholar.google.co.in/citations?user=5xxepFkAAAAJ&hl=en" target="_blank" style="color:var(--primary);">Dr. Yogesh Kumar Meena</a></p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">Working on developing advanced systems for translating brain signals into communicative decisions.</p>
         </div>
 
         <div class="section-header">
-            <h2>Experience</h2>
+            <h2>Experience & Education</h2>
             <div class="section-line"></div>
         </div>
         <div class="timeline">
             <div class="timeline-item">
-                <span class="timeline-date">June 2019 - Present</span>
+                <span class="timeline-date">Sep 2025 - Present</span>
                 <div class="timeline-content">
-                    <h3>Assistant Professor</h3>
-                    <p>School of Medical Science & Technology, IIT Kharagpur</p>
+                    <h3>Postdoctoral Fellow</h3>
+                    <p>Indian Institute of Technology Gandhinagar</p>
                 </div>
             </div>
             <div class="timeline-item">
-                <span class="timeline-date">August 2018 - June 2019</span>
+                <span class="timeline-date">Jan 2020 - Dec 2025</span>
                 <div class="timeline-content">
-                    <h3>Visiting Assistant Professor</h3>
-                    <p>School of Medical Science & Technology, IIT Kharagpur</p>
+                    <h3>Ph.D. in School of Medical Science and Technology</h3>
+                    <p>Indian Institute of Technology Kharagpur</p>
+                    <p class="supervisor">Thesis: An Integrated Framework for Predicting Epilepsy using EEG Signals</p>
+                    <p class="supervisor">Supervisors: Dr. Debashree Guha Adhya & Prof. Manjunatha Mahadevappa</p>
                 </div>
             </div>
             <div class="timeline-item">
-                <span class="timeline-date">February 2012 - August 2018</span>
+                <span class="timeline-date">Previous Experience</span>
                 <div class="timeline-content">
-                    <h3>Assistant Professor</h3>
-                    <p>Department of Mathematics, IIT Patna</p>
+                    <h3>Software Engineer II</h3>
+                    <p>Terralogic Software Solutions Pvt. Ltd., Bangalore</p>
                 </div>
             </div>
             <div class="timeline-item">
-                <span class="timeline-date">May 2016 - July 2016</span>
+                <span class="timeline-date">Previous Experience</span>
                 <div class="timeline-content">
-                    <h3>Visiting Researcher (SAIA-NSP)</h3>
-                    <p>Slovak University of Technology, Bratislava</p>
+                    <h3>Deep Learning Engineer</h3>
+                    <p>Innoactive Intelligence LLP, Bangalore</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">Education</span>
+                <div class="timeline-content">
+                    <h3>M. Tech. in Signal Processing</h3>
+                    <p>University of Calicut</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">Education</span>
+                <div class="timeline-content">
+                    <h3>B. Tech. in Electronics and Communication</h3>
+                    <p>JNTU Anantapur</p>
                 </div>
             </div>
         </div>
 
         <div class="section-header">
-            <h2>Funding Agencies</h2>
+            <h2>Patents</h2>
             <div class="section-line"></div>
         </div>
-        <div class="funding-row">
-            <a href="https://www.anrfonline.in/ANRF/HomePage" target="_blank"><img src="anrf.jpg" class="funding-logo" alt="ANRF"></a>
-            <a href="https://www.iitkgp.ac.in/" target="_blank"><img src="iitkgp.jpg" class="funding-logo" alt="IITKGP"></a>
-            <a href="https://www.icmr.gov.in/" target="_blank"><img src="icmr.jpg" class="funding-logo" alt="ICMR"></a>
-            <a href="https://www.nus.edu.sg/" target="_blank"><img src="nus.png" class="funding-logo" alt="NUS"></a>
+        <div class="card" style="padding: 25px; margin-bottom: 20px;">
+            <ul style="padding-left: 20px;">
+                <li style="margin-bottom: 15px;"><strong>A Point-of-Care based System for Generating and Analyzing Tear Fern Patterns</strong> <br><span style="color: var(--text-muted); font-size: 0.9rem;">(Provisional No: 202531029164, 2025)</span></li>
+                <li><strong>A Real-Time Ultrafast Epilepsy Diagnosis and Artifact Classification System</strong> <br><span style="color: var(--text-muted); font-size: 0.9rem;">(Application Filled Dec 2025)</span></li>
+            </ul>
+        </div>
+
+        <div class="section-header">
+            <h2>Professional Activities</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="card" style="padding: 25px;">
+            <p><strong>Reviewer for:</strong> IEEE ISBI, IEEE INDICON, IDEAL 2025, Frontiers in Neuroscience, Expert Systems with Applications, and Signal, Image and Video Processing.</p>
         </div>
     </div>
 
     <div id="team" class="tab-content container">
         <div class="section-header">
-            <h2>PhD Scholars</h2>
+            <h2>Collaborators</h2>
             <div class="section-line"></div>
         </div>
         <div class="grid-container">
             <div class="card team-card">
-                <div class="team-photo-wrap" id="bday-pragya">
-                    <img src="Pragya.jpg" class="team-photo">
-                </div>
-                <span class="team-name">Pragya Gupta</span>
-                <span class="team-role">Fuzzy Information Processing</span>
+                <img src="Debashree.jpg" class="team-photo">
+                <span class="team-name">Dr. Debashree Guha Adhya</span>
+                <span class="team-role">IIT Kharagpur</span>
             </div>
             
             <div class="card team-card">
-                <div class="team-photo-wrap" id="bday-chandrima">
-                    <img src="Chandrima.png" class="team-photo">
-                </div>
-                <span class="team-name">Chandrima Debnath</span>
-                <span class="team-role">Machine Learning in Healthcare</span>
+                <img src="Manjunatha.jpeg" class="team-photo">
+                <span class="team-name">Prof. Manjunatha Mahadevappa</span>
+                <span class="team-role">IIT Kharagpur</span>
             </div>
 
             <div class="card team-card">
-                <div class="team-photo-wrap" id="bday-soumita">
-                    <img src="Soumita.jpg" class="team-photo">
-                </div>
-                <span class="team-name">Soumita Guria</span>
-                <span class="team-role">Multi Criteria Decision Aid</span>
+                <img src="aneek.png" class="team-photo">
+                <span class="team-name">Dr. Aneek Adhya</span>
+                <span class="team-role">IIT Kharagpur</span>
             </div>
 
             <div class="card team-card">
-                <div class="team-photo-wrap" id="bday-sanchita">
-                    <img src="Sanchita.jpg" class="team-photo">
-                </div>
-                <span class="team-name">Sanchita Mondal</span>
-                <span class="team-role">Machine Learning in Medical Decision Making</span>
+                <img src="debjani.jpg" class="team-photo">
+                <span class="team-name">Prof. Debjani Chakraborty</span>
+                <span class="team-role">IIT Kharagpur</span>
             </div>
-        </div>
 
-        <div class="section-header" style="margin-top: 50px;">
-            <h2>Alumni</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="grid-container">
             <div class="card team-card">
-                <a href="https://gowthamgit04.github.io/Gowtham12/" target="_blank">
-                    <div class="team-photo-wrap" id="bday-gowtham">
-                        <img src="Gowtham.jpg" class="team-photo">
-                    </div>
-                    <span class="team-name">Gowtham Reddy N</span>
-                </a>
-                <span class="team-role">Postdoctoral Fellow, IIT Gandhinagar<br>(2020-2025)</span>
+                <img src="Yogesh.jpg" class="team-photo">
+                <span class="team-name">Dr. Yogesh Kumar Meena</span>
+                <span class="team-role">IIT Gandhinagar</span>
             </div>
         </div>
     </div>
 
     <div id="publications" class="tab-content container">
         <div class="section-header">
-            <h2>Recent Journals</h2>
+            <h2>Selected Publications</h2>
             <div class="section-line"></div>
         </div>
         
         <div class="pub-item">
-            <p class="pub-text"><strong>Guria, Soumita, et al.</strong> "MULTIMOORA-Sort: A multi-criteria sorting framework integrating criteria interactions, explanations, and preference disaggregation." <em>Computers & Industrial Engineering</em> (2025): 111598.</p>
-        </div>
-        <div class="pub-item">
-            <p class="pub-text"><strong>Gupta, Pragya, et al.</strong> "Bonferroni Mean Pre-Aggregation Operator Assisted Dynamic Fuzzy Histogram Equalization for Retinal Vascular Segmentation." <em>IEEE Journal of Biomedical and Health Informatics</em> (2025).</p>
-        </div>
-        <div class="pub-item">
-            <p class="pub-text"><strong>Reddy, Gowtham, et al.</strong> "Classification of epileptic EEG signals with the utilization of Bonferroni mean based fuzzy pattern tree." <em>Expert Systems with Applications</em> 239 (2024): 122424.</p>
-        </div>
-        <div class="pub-item">
-            <p class="pub-text"><strong>Debnath, Chandrima, et al.</strong> "Evolutionary ensembles based on prioritized aggregation operator." <em>Soft Computing</em> 27.24 (2023): 18469-18488.</p>
-        </div>
-    </div>
-
-    <div id="events" class="tab-content container">
-        <div class="section-header">
-            <h2>Recent Events</h2>
-            <div class="section-line"></div>
-        </div>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <span class="timeline-date">17-19 December 2025</span>
-                <div class="timeline-content">
-                    <h3>RADMED Conference 2025</h3>
-                    <p>Members of the Medical Informatics team served as volunteers at the International Conference on Recent Advances in Medical Science and Technology.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <span class="timeline-date">12 January 2024</span>
-                <div class="timeline-content">
-                    <h3>SMST RS Day 2024</h3>
-                    <p>The Medical Informatics team actively participated and showcased their research contributions at the SMST RS Day.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="vacancies" class="tab-content container">
-        <div class="section-header">
-            <h2>Join Our Team</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="card" style="padding: 40px; text-align: center;">
-            <i class="fas fa-users" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
-            <h3>National Post-Doctoral Fellowship (NPDF)</h3>
-            <p style="max-width: 600px; margin: 15px auto; color: var(--text-muted);">
-                We invite applications from highly motivated candidates to join our interdisciplinary computational research group at IIT Kharagpur. Areas include Operational Research, MCDM, and Medical Imaging.
+            <p class="pub-text">
+                <strong>Classification of epileptic EEG signals with the utilization of Bonferroni mean based fuzzy pattern tree</strong>
+                Expert Systems with Applications, 239, 122424. (2024)
             </p>
-            <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; display: inline-block; margin-top: 20px;">
-                <p><strong>Deadline:</strong> 17 January 2026</p>
-                <a href="mailto:debashree_smst@smst.iitkgp.ac.in" class="contact-btn" style="background: var(--primary); color: white; margin-top: 10px;">
-                    Apply Now
-                </a>
-            </div>
         </div>
-    </div>
-
-    <div id="pictures" class="tab-content container">
-        <div class="section-header">
-            <h2>Gallery</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="gallery-grid">
-            <img src="LEF.png" class="gallery-img">
-            <img src="Lab.jpg" class="gallery-img">
-            <img src="DC.png" class="gallery-img">
-            <img src="Trip.jpg" class="gallery-img">
-            <img src="Gowtham_pre.jpg" class="gallery-img">
-            <img src="PGT.png" class="gallery-img">
-        </div>
-    </div>
-
-    <div id="news" class="tab-content container">
-        <div class="section-header">
-            <h2>Latest News</h2>
-            <div class="section-line"></div>
+        
+        <div class="pub-item">
+            <p class="pub-text">
+                <strong>An efficient ID CNN architecture for multi-channel EEG seizure detection</strong>
+                Proceedings of the 47th Annual International Conference of the IEEE EMBS. (Presented, July 2025)
+            </p>
         </div>
 
-        <div class="news-card item" data-date="2026-01-25">
-            <span class="news-date">January 2026</span>
-            <p><strong>Pragya Gupta</strong> and <strong>Soumita Guria</strong> will be presenting their research at the <strong>Eighteenth International Conference on Fuzzy Set Theory and Applications (FSTA 2026)</strong> in Slovak Republic, from Jan 25-30, 2026.</p>
-        </div>
-
-        <div class="news-card item" data-date="2026-01-16">
-            <span class="news-date">January 2026</span>
-            <p><strong>Ankita Dutta</strong> will be presenting her <strong>Ph.D. Synopsis Seminar</strong> on <strong>16 January 2026</strong>, at <strong>4 PM IST</strong>.</p>
-            <div style="margin-top: 15px;">
-                <a href="https://meet.google.com/qpq-cidm-zcb" target="_blank" class="contact-btn" style="background: var(--accent); color: white;">
-                    <i class="fas fa-video"></i> Join via Google Meet
-                </a>
-            </div>
+        <div class="pub-item">
+            <p class="pub-text">
+                <strong>EEG artifact removal using stacked multi-Head attention transformer architecture</strong>
+                46th Annual International Conference of the IEEE EMBS. (July 2024)
+            </p>
         </div>
     </div>
 
     <footer style="text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem;">
-        &copy; 2026 Dr. Debashree Guha Adhya | IIT Kharagpur
+        &copy; 2026 Dr. Gowtham Reddy Nimmalapalli
     </footer>
 
     <script>
@@ -730,7 +566,6 @@
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
             
-            // Scroll to top
             window.scrollTo(0, 0);
         }
 
@@ -752,57 +587,6 @@
             tablinks[0].className += " active";
             window.scrollTo(0, 0);
         }
-
-        // --- FLICKER LOGIC (Adapted for new style) ---
-        function applyAutoFlicker() {
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            const newsItems = document.querySelectorAll('.item[data-date]');
-
-            newsItems.forEach(item => {
-                const eventDate = new Date(item.getAttribute('data-date'));
-                if (today <= eventDate) {
-                    const textParagraph = item.querySelector('p');
-                    if (textParagraph && !textParagraph.innerHTML.includes('UPCOMING')) {
-                        textParagraph.innerHTML = '<span class="upcoming-badge">UPCOMING</span> ' + textParagraph.innerHTML;
-                    }
-                }
-            });
-        }
-
-        // --- BIRTHDAY LOGIC ---
-        function checkBirthdays() {
-            const today = new Date();
-            const month = today.getMonth() + 1; 
-            const day = today.getDate();
-
-            const birthdays = [
-                { id: "bday-pragya", month: 3, day: 29 },
-                { id: "bday-chandrima", month: 12, day: 7 }, 
-                { id: "bday-soumita", month: 11, day: 27 },
-                { id: "bday-sanchita", month: 1, day: 14 },
-                { id: "bday-gowtham", month: 1, day: 12 },
-                { id: "bday-swati", month: 8, day: 24 }
-            ];
-
-            birthdays.forEach(person => {
-                if (person.month === month && person.day === day) {
-                    const container = document.getElementById(person.id);
-                    if (container) {
-                        container.innerHTML += `
-                            <div class="birthday-badge">🎂 HBD!</div>
-                            <span class="balloon bal-1">🎈</span>
-                            <span class="balloon bal-2">🎈</span>
-                        `;
-                    }
-                }
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            applyAutoFlicker();
-            checkBirthdays();
-        });
     </script>
 </body>
 </html>
